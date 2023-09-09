@@ -7,6 +7,9 @@
         const url = "https://httpbin.org/delay/1";
         request.open("GET",url,false);
         request.send(null);
+        const url2 = "https://httpbin.org/user-agent";
+        request.open("GET",url2,false);
+        request.send(null);
         console.log("通信完了")
     }
 </script>
