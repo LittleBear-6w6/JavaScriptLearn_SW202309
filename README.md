@@ -1,0 +1,2 @@
+# JavaScriptLearn_SW202309
+「Software Design2023年９月号のJavaScript非同期処理の疑問を解き明かす」の学習
