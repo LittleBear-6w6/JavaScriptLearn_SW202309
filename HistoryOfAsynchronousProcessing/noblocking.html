@@ -1,0 +1,22 @@
+<div id="time"></div>
+<button onclick="sendRequest()">処理開始</button>
+<script>
+    setInterval(() => time.innerText = Date.now());
+    const onLoad = () =>{
+        console.log("通信完了")
+    }
+    const sendRequest = () => {
+        const request = new XMLHttpRequest();
+        const url = "https://httpbin.org/delay/1";
+        request.open("GET",url,false);
+        request.onload = onLoad;
+        console.log("ブロッキング版　開始")
+        request.send();
+        console.log("ブロッキング版　終了")
+        request.open("GET",url,true);
+        request.onload = onLoad;
+        console.log("ノンブロッキング版　開始")
+        request.send();
+        console.log("ノンブロッキング版　終了")
+    }
+</script>
